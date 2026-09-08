@@ -1,0 +1,16 @@
+{
+  "name": "rapid-fat-loss-workbook",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Rapid Fat Loss Framework Interactive Workbook — modular monolith (web + api)",
+  "workspaces": ["apps/*"],
+  "scripts": {
+    "dev": "npm run dev --workspace @rfl/api",
+    "dev:web": "npm run dev --workspace @rfl/web",
+    "build": "npm run build --workspace @rfl/api && npm run build --workspace @rfl/web",
+    "test": "npm run test --workspace @rfl/api",
+    "db:migrate": "npm run db:migrate --workspace @rfl/api",
+    "typecheck": "npm run typecheck --workspace @rfl/api && npm run typecheck --workspace @rfl/web"
+  },
+  "engines": { "node": ">=20" }
+}
